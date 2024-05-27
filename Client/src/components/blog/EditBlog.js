@@ -7,8 +7,8 @@ import NavBar from '../Styles/Navbar';
 import Spinner from '../Spinner/spinner';
 import EditUserBlog from './EditUserBlog';
 
-const EditRecipes = () => {
-  const [recipes, setRecipes] = useState([]);
+const EditBlogs = () => {
+  const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const isLoggedIn = window.localStorage.getItem('loggedIn');
 
@@ -19,7 +19,7 @@ const EditRecipes = () => {
   };
 
   useEffect(() => {
-    sendRequest().then((data) => setRecipes(data.recipes));
+    sendRequest().then((data) => setBlogs(data.blogs));
     setTimeout(() => {
       setLoading(false);
     }, 2000);
@@ -43,8 +43,8 @@ const EditRecipes = () => {
       ) : (
         <div>
           <div className='recipe-page'>
-            {recipes &&
-              recipes.map((recipe, index) => (
+            {blogs &&
+              blogs.map((recipe, index) => (
                 <EditUserBlog
                   key={index}
                   id={recipe._id}
@@ -63,4 +63,4 @@ const EditRecipes = () => {
   );
 };
 
-export default EditRecipes;
+export default EditBlogs;
