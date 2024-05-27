@@ -33,8 +33,8 @@ const BlogDetail = () => {
 
   useEffect(() => {
     fetchDetails().then(data => {
-      setBlog(data.recipe)
-      setInputs({ title: data.recipe.title, description: data.recipe.description })
+      setBlog(data.blog)
+      setInputs({ title: data.blog.title, description: data.blog.description })
     })
   }, [id]);
 
