@@ -71,7 +71,7 @@ export default function SignUp() {
                 <div>
                     <div className='auth'>
                         <form className="form-container" onSubmit={handleSubmit}>
-                            <h6 className="form-container__subtitle">Are you a admin? Please Sign Up first to Add Recipe</h6> <br /><br />
+                            <h6 className="form-container__subtitle">Please Sign Up first to Add Blog</h6> <br /><br />
                             <h3 className="form-container__title">Sign Up</h3>
                             <div>
                                 <label className="form-container__label">Secret Key</label>

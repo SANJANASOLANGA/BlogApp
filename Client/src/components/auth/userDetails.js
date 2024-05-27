@@ -31,6 +31,4 @@ export default function UserDetails() {
   }, []);
 
   return <Blogs/>
-
-//   return admin ? <AdminHome /> : <UserHome userData={userData} />;
 }
