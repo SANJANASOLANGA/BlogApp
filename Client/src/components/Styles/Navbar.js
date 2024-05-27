@@ -53,10 +53,6 @@ function NavBar() {
               <AiOutlineHome/>
               {" "}Home
             </Nav.Link>
-            <Nav.Link as={Link} to="/blogs" onClick={handleLinkClick}>
-              <TbToolsKitchen2/>
-              {" "}Blogs
-            </Nav.Link>
             <Nav.Link as={Link} to="/create-blog" onClick={handleLinkClick}>
               <CgFileAdd/> {" "}Create Blog
             </Nav.Link>
