@@ -64,7 +64,7 @@ if (!isLoggedIn) {
       <Container>
         <Helmet>
           <meta charSet="utf-8" />
-          <title>Blogs | Add Recipes</title>
+          <title>Add Blogs</title>
         </Helmet>
       </Container>
       <div className='auth'>
