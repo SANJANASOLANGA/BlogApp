@@ -22,7 +22,7 @@ const EditUserBlog = ({ title, description, imageURL, id }) => {
 
   const handleDelete = () => {
     alert('Deleted Successfully!');
-    deleteRequest().then(() => navigate('/')).then(() => navigate('/adminHome'));
+    deleteRequest().then(() => navigate('/')).then(() => navigate('/edit-recipes'));
   };
 
   return (
