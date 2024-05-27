@@ -18,7 +18,7 @@ const Blogs = () => {
   const isLoggedIn = window.localStorage.getItem('loggedIn');
 
   useEffect(() => {
-    sendRequest().then((data) => setBlogs(data.recipes));
+    sendRequest().then((data) => setBlogs(data.blogs));
     setTimeout(() => {
       setLoading(false);
     }, 2000);
