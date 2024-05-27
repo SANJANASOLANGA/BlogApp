@@ -52,13 +52,7 @@ The Blog App is a web application built using the MERN stack (MongoDB, Express.j
 
 ### Running the Application
 
-1. Start the MongoDB server:
-
-    ```sh
-    mongod
-    ```
-
-2. Start the backend server:
+1. Start the backend server:
 
     ```sh
     cd Server
