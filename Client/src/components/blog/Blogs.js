@@ -16,7 +16,7 @@ const Blogs = () => {
   };
 
   useEffect(() => {
-    sendRequest().then((data) => setBlogs(data.recipes));
+    sendRequest().then((data) => setBlogs(data.blogs));
     setTimeout(() => {
       setLoading(false);
     }, 2000);
