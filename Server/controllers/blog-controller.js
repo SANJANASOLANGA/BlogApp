@@ -87,3 +87,34 @@ exports.getById = async (req, res, next) => {
   return res.status(200).json({ blog });
 };
 
+exports.deleteBlog = async (req, res, next) => {
+  const id = req.params.id;
+  let recipe;
+  try {
+    recipe = await BlogModel.findByIdAndRemove(id).populate('user');
+    await recipe.user.recipes.pull(recipe);
+    await recipe.user.save();
+  } catch (err) {
+    console.log(err);
+    return res.status(500).json({ message: err });
+  }
+  if (!recipe) {
+    return res.status(500).json({ message: 'Unable to Delete' });
+  }
+  return res.status(200).json({ message: 'Successfully Deleted' });
+};
+
+exports.getByUserId = async (req, res, next) => {
+  const userId = req.params.id;
+  let userBlogs;
+  try {
+    userBlogs = await User.findById(userId).populate('blogs');
+  } catch (err) {
+    console.log(err);
+    return res.status(500).json({ message: err });
+  }
+  if (!userBlogs) {
+    return res.status(404).json({ message: 'No Blog Found' });
+  }
+  return res.status(200).json({ userBlogs });
+};
